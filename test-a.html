@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+
   <div>同源</div>
   <iframe id="testA" src="http://test-a.icyc.cc/test-b.html"></iframe>
 
@@ -14,10 +15,14 @@
   <iframe id="testB" src="http://test-b.icyc.cc/test-b.html"></iframe>
   <!-- <iframe id="testA" src="./test-b.html"></iframe> -->
 
+  <button id="btn">获取document</button>
   <script>
+    btn.onclick = function () {
+      console.log(testA.contentDocument);
+      console.log(testB.contentDocument);
+    }
     // window.document.domain = 'icyc.cc';
-    console.log(testA.contentDocument?.document);
-    console.log(testB.contentDocument?.document);
+
   </script>
 </body>
 </html>
