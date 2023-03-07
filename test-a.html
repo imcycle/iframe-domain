@@ -16,12 +16,16 @@
   <!-- <iframe id="testA" src="./test-b.html"></iframe> -->
 
   <button id="btn">获取document</button>
+  <button id="btn1">设置domain</button>
   <script>
     btn.onclick = function () {
       console.log(testA.contentDocument);
       console.log(testB.contentDocument);
     }
-    // window.document.domain = 'icyc.cc';
+
+    btn1.onclick = function () {
+      window.document.domain = 'icyc.cc';
+    }
 
   </script>
 </body>
