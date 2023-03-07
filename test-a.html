@@ -16,7 +16,8 @@
   <!-- <iframe id="testA" src="./test-b.html"></iframe> -->
 
   <button id="btn">获取document</button>
-  <button id="btn1">设置domain</button>
+  <button id="btn1">设置自己domain</button>
+  <button id="btn2">设置test-b domain , storage</button>
   <script>
     btn.onclick = function () {
       console.log(testA.contentDocument);
@@ -27,6 +28,10 @@
       window.document.domain = 'icyc.cc';
     }
 
+    btn2.onclick = function () {
+      var iframe = document.createElement('iframe')
+      iframe.src = 'http://test-b.icyc.cc/set-storage-and-jump?domain=icyc.cc&storage=123'
+    }
   </script>
 </body>
 </html>
