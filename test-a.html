@@ -7,6 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-  <iframe src="http://test-b.icyc.cc/test-b.html" frameborder="0"></iframe>
+  <iframe id="testB" src="http://test-b.icyc.cc/test-b.html"></iframe>
+  <iframe id="testA" src="http://test-a.icyc.cc/test-b.html"></iframe>
+  <!-- <iframe id="testA" src="./test-b.html"></iframe> -->
+
+  <script>
+    document.getElementsByTagName('iframe')[0].contentDocument
+  </script>
 </body>
 </html>
