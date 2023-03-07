@@ -8,16 +8,19 @@
 </head>
 <body>
 
-  <div>同源</div>
+  <div>同源 http://test-a.icyc.cc</div>
   <iframe id="testA" src="http://test-a.icyc.cc/test-b.html"></iframe>
 
-  <div>非同源，设置domain</div>
+  <div>非同源 http://test-b.icyc.cc</div>
   <iframe id="testB" src="http://test-b.icyc.cc/test-b.html"></iframe>
   <!-- <iframe id="testA" src="./test-b.html"></iframe> -->
 
+  <div>非同源 http://icyc.cc</div>
+  <iframe id="testC" src="http://icyc.cc/"></iframe>
+
   <button id="btn">获取document</button>
-  <button id="btn1">设置自己domain</button>
-  <button id="btn2">设置test-b domain , storage</button>
+  <button id="btn1">设置自己domain 为 icyc.cc</button>
+  <button id="btn2">设置 test-b domain: icyc.cc , storage</button>
   <script>
     btn.onclick = function () {
       console.log('testA',testA.contentDocument);
@@ -31,7 +34,7 @@
 
     btn2.onclick = function () {
       var iframe = document.createElement('iframe')
-      iframe.src = 'http://test-b.icyc.cc/set-storage-and-jump?domain=icyc.cc&storage=123&href=/test-b.html'
+      iframe.src = 'http://test-b.icyc.cc/set-storage-and-jump?domain=icyc.cc&storage=123&href1=/test-b.html'
       iframe.id = 'testC'
       document.body.appendChild(iframe)
     }
